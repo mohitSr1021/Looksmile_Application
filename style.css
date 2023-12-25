@@ -1,0 +1,1937 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* #f7fafe */
+    --black-color: #333;
+    --primary-color: #36454F;
+    --white-color: #aliceblue;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    z-index: 9999;
+    background-color: #36454F;
+    color: var(--white-color);
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+}
+
+#logo {
+    background-image: url('./assests/img/logo_new.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    max-width: 150px;
+    height: 100%;
+    color: wheat;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease-in;
+
+}
+
+
+#logo:hover {
+    transform: scale(1.09);
+
+}
+
+.curve {
+
+    width: 70px;
+    height: 30%;
+    background-color: transparent;
+    border-radius: 100% 100% 0 0;
+    position: absolute;
+    top: 50px;
+    left: 33px;
+    border: 2px solid;
+    border-top-color: rgb(255, 0, 208);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(180deg);
+    background-color: transparent;
+    animation: smile 2s forwards;
+}
+
+
+@keyframes smile {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 1;
+
+    }
+
+    50% {
+        transform: rotate(-185deg);
+
+    }
+
+    75% {
+        transform: rotate(-190deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-190deg);
+        opacity: 1;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 10px;
+    position: relative;
+
+}
+
+.navbar .navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar .navlist li {
+    padding: 0px 10px;
+
+}
+
+
+
+.navbar .navlist li a:hover {
+    opacity: 0.7;
+}
+
+.navbar .navlist li #skill-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar .navlist li #skill-link .right-antina {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 70%;
+    bottom: 30px;
+    transform: rotate(120deg);
+    animation: animate 2.4s ease-out infinite;
+}
+
+
+.navbar .navlist li #skill-link .left-antina {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: rotate(-120deg);
+    animation: animate 2s ease-in infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        background-color: white;
+    }
+
+    50% {
+        opacity: 0.7;
+        background-color: rgb(226, 104, 104);
+    }
+
+    100% {
+        opacity: 0;
+        background-color: white;
+    }
+}
+
+#nav-list-un {
+    color: rgb(255, 0, 0) !important;
+    background-color: #ffffff;
+    padding: 0px 2px 0px 2px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 2px;
+}
+
+.active-link {
+    color: orange;
+}
+
+
+#cart {
+    padding: 2px 10px 2px 0px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.auth {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+}
+
+#login {
+    width: 100px;
+    height: 45px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in;
+    background-color: rgb(99, 196, 130);
+}
+
+/* #login a {
+    color: rgb(32, 217, 195) !important;
+} */
+
+#login a {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#login i {
+    font-size: 21px;
+    color: #36454F;
+}
+
+#Signup {
+    background-color: blue;
+    width: 100px;
+    height: 45px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in;
+}
+
+#Signup a {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#login:hover {
+    transform: scale(1.09);
+}
+
+#Signup:hover {
+    transform: scale(1.09);
+}
+
+.nav-menu {
+    width: 30px;
+    height: 30px;
+    z-index: 99;
+    position: absolute;
+    right: 10px;
+    margin: auto 10px;
+    display: none;
+}
+
+.nav-menu span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu .menu-icon[name="mob-close"] {
+    display: none;
+    font-size: 28px;
+}
+
+.nav-menu .menu-icon[name="mob-menu"] {
+    font-size: 28px;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------- herosection ------------------------  */
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .container {
+    width: 100%;
+    max-width: 1340px !important;
+    text-align: left;
+}
+
+.section .container .outerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.section .container .outerDiv .description {
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    color: wheat;
+}
+
+h1 {
+    font-size: 40px;
+    color: wheat;
+
+}
+
+.para_1 {
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 0.5s ease-out;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+#rocket {
+    background-image: url('assests/svg/rocket-2-svgrepo-com.svg');
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+
+}
+
+.comm, .para_1 {
+    color: #CCCCCC;
+}
+
+.para_2 {
+    opacity: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.hidden {
+    display: block;
+
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.6s ease-out;
+
+}
+
+.section .container .outerDiv .heroImage {
+    width: 500px;
+    max-width: 600px;
+    height: 500px;
+    background-image: url('assests/img/hearo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+
+.section .container .outerDiv .heroImage {
+    animation: bounce 3s infinite ease-in-out;
+    position: relative;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.section .container .outerDiv .heroImage .gear {
+    background-image: url('assests/svg/gear1.svg');
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 10px;
+    bottom: 20px;
+    position: absolute;
+    bottom: 18%;
+    right: 16%;
+}
+
+
+.section .container .outerDiv .heroImage .gear2 {
+    background-image: url('assests/svg/gear2.svg');
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 10px;
+    bottom: 20px;
+    position: absolute;
+    bottom: 22%;
+    right: 6%;
+}
+
+.section .container .outerDiv .heroImage .gear3 {
+    background-image: url('assests/svg/gear3.svg');
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 10px;
+    bottom: 20px;
+    position: absolute;
+    bottom: 12%;
+    right: 7.4%;
+}
+
+
+@keyframes rotation-first {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotation-second {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes rotation-three {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gear {
+    animation: rotation-first 5s linear infinite;
+    transform-origin: center;
+}
+
+.gear2 {
+    animation: rotation-second 5s linear infinite;
+    transform-origin: center;
+}
+
+.gear3 {
+    animation: rotation-three 5s linear infinite;
+    transform-origin: center;
+}
+
+
+/* ------------------------------------------------------------------------  heading section (highlight-heading) ------------------ */
+
+
+.highlight-header {
+    padding: 40px 0px;
+    margin: 40px 0px;
+}
+
+.highlight-header .container {
+    text-align: center;
+    padding: 40px 0px;
+    margin: 20px 0px;
+}
+
+.highlight-header .container .outerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10px 10px 10px;
+
+}
+
+.highlight-header .container .outerDiv .box-title {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 80px;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+
+.highlight-header .container .outerDiv .box-title h1 {
+    font-size: 66px;
+}
+
+.highlight-header .container .outerDiv .box-title h1 span {
+    color: rgb(190, 190, 235);
+}
+
+.highlight-header .container .outerDiv .desc {
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.highlight-header .container .outerDiv .desc p {
+    color: whitesmoke;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 24px;
+}
+
+
+/* ---------------------------------------------------------------------------- heading section - 2 (highlight-heading) ------------------ */
+
+.highlight {
+    padding: 40px 0px;
+    margin: 20px 0px;
+}
+
+.highlight .container {
+    text-align: center;
+    padding: 40px 0px;
+    margin: 20px 0px;
+}
+
+.highlight .container .outerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10px 40px 10px;
+}
+
+.highlight .container .outerDiv .box-title {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 80px;
+    margin-top: 80px;
+    padding-top: 80px;
+    position: relative;
+
+}
+
+.highlight .container .outerDiv .box-title .Achieve {
+    width: 100px;
+    height: 160px;
+    background-image: url('/assests/img/Lovepik_com-380005112-confetti-cheers-party-happy.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+.highlight .container .outerDiv .box-title h1 {
+    font-size: 55px;
+    box-shadow: rgba(225, 225, 225, 0.35) 0px 2px;
+    padding: 0px 10px 0px 10px;
+}
+
+.highlight .container .outerDiv .box-title h1 span {
+    color: rgb(190, 190, 235);
+}
+
+.highlight .container .outerDiv .desc {
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+/* --------------------------------------------------------------------------------  Achievement card section  */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px 40px 0px;
+    padding: 10px 10px 40px 10px;
+    gap: 30px;
+}
+
+.card {
+    color: wheat;
+    width: 600px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    border-right: 1px solid white;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    border: solid rgb(99, 196, 130);
+}
+
+.card .certificate {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card .image-size {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.spec-image-css {
+    width: 250px !important;
+    height: 250px !important;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: white !important;
+}
+
+
+/* -------------------------------------------------------------------------------- section our programs */
+
+.our-programs {
+    padding: 40px 0px;
+    margin: 20px 0px;
+}
+
+.our-programs .container {
+    text-align: center;
+    padding: 40px 0px;
+    margin: 40px 0px;
+}
+
+.our-programs .container .outerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10px 10px 10px;
+}
+
+.our-programs .container .outerDiv .box-title {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 80px;
+    margin-top: 80px;
+    padding-top: 80px;
+    position: relative;
+
+}
+
+.our-programs .container .outerDiv .box-title h1 {
+    font-size: 3em;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.our-programs .container .outerDiv .box-title h1 span {
+    color: rgb(190, 190, 235);
+}
+
+.programs-container {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px 40px 0px;
+    padding: 40px 0px;
+}
+
+.programs-card {
+    flex: 1 1 18rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.programs-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.programs-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.8s ease-in-out;
+}
+
+
+.programs-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.programs-card .details {
+    padding: 15px;
+
+}
+
+.programs-card h2 {
+    font-size: 1.5em;
+    color: rgb(190, 190, 235);
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding: 10px;
+
+}
+
+.programs-card .level,
+.programs-card .instructor {
+    font-size: 14px;
+    color: rgb(123, 41, 143);
+    margin-bottom: 5px;
+}
+
+.programs-card .text {
+    font-size: 14px;
+    margin: 10px auto;
+    color: #777;
+    padding: 10px;
+    text-align: left;
+}
+
+#sub-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+#sub-header .level span {
+    font-weight: 500;
+    color: black;
+}
+
+#sub-header .instructor span {
+    font-weight: 500;
+    color: black;
+}
+
+#sub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0px 10px;
+}
+
+.programs-card .duration {
+    font-size: 1rem;
+    color: rgb(230, 91, 91);
+}
+
+.programs-card .price {
+    font-size: 1.1rem;
+    color: #F5A623;
+}
+
+.programs-card button {
+    background-color: rgb(99, 196, 130);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.programs-card button:hover {
+    background-color: #5246FF;
+}
+
+.programs-container .programs-card .img-outer-container {
+    overflow: hidden;
+}
+
+
+/* --------------------------------------------------------------------------------  review section  */
+
+
+.review-section {
+    padding: 40px 0px;
+    margin: 20px 0px 180px 0px;
+}
+
+.review-section .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0px;
+    margin: 40px 0px;
+}
+
+.review-section .container .outerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10px 10px 10px;
+}
+
+.review-section .container .outerDiv .box-title {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 80px;
+    margin-top: 80px;
+    position: relative;
+
+}
+
+
+.review-section .container .outerDiv .box-title div {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 70px;
+}
+
+.review-section .container .outerDiv .box-title div h1 {
+    font-size: 2rem;
+    box-shadow: 0px 0px 5px 5px rgba(210, 210, 210, 0.1);
+    padding: 0 20px;
+    padding: 0px 10px;
+}
+
+.review-section .container .outerDiv .box-title div h1 span {
+    color: rgb(190, 190, 235);
+}
+
+.review-section .container .outerDiv .box-title div p {
+    line-height: 70px;
+    padding: 0px 10px;
+}
+
+
+.review-craousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.mySlides {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 10%;
+}
+
+
+.review-card {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    color: black;
+    padding: 60px;
+}
+
+.review-card .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.review-card .header .left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review-card .header .left h4 {
+    padding: 10px;
+}
+
+.review-card .header .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.review-card .header .right .rating {
+    font-size: 25px;
+}
+
+.review-card p {
+    font-size: 18px;
+    text-align: center !important;
+}
+
+.review-card img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid rgb(190, 190, 235);
+    border-radius: 50px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.review-card .rating {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.prev {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    top: 50%;
+    left: 10px;
+    width: auto;
+    padding: 13px;
+    color: white;
+    margin-top: -22px;
+    background-color: black;
+    border-radius: 10px 0px 0px 10px;
+
+
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    top: 50%;
+    width: auto;
+    right: 10px;
+    padding: 13px;
+    color: white;
+    margin-top: -22px;
+    background-color: black;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(190, 190, 235);
+
+}
+
+
+.review-craousel .mySlides .numbertext {
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    z-index: 45;
+}
+
+.active:hover {
+    background-color: #201919;
+}
+
+.review-craousel .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+
+
+}
+
+
+/* footer section */
+
+/* Base styles */
+.footer {
+    margin: 100px 0 0 0;
+    padding: 40px 0;
+    background-color: #1D2B35;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+}
+
+.footer .footer-container .header .left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+    margin: 4px;
+}
+
+.footer .footer-container .header .left .category {
+    text-align: center;
+    color: #a0a0a0;
+    padding: 5px 5px;
+}
+
+.footer .footer-container .header .left .category h3 {
+    margin-bottom: 10px;
+}
+
+.header li div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1D2B35;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.footer .footer-container .footer-info {
+    background-color: #2E3D48;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-container .footer-info p {
+    margin: 0;
+    color: #a0a0a0;
+}
+
+.footer .footer-container .header .right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    height: 100%;
+    padding: 4px;
+
+}
+
+.footer .footer-container .header .right #bottom-logo {
+    background-image: url('./assests/img/logo_new.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    max-width: 150px;
+    margin: 20px 20px 2px 20px;
+    position: relative;
+}
+
+.footer .footer-container .header .right .bottom-logo .bottom-curve {
+    width: 50px;
+    height: 30%;
+    border-radius: 100% 100% 0 0;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    border: 2px solid;
+    border-top-color: rgb(255, 0, 208);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(180deg);
+    background-color: transparent;
+    animation: smile 2s forwards;
+}
+
+.footer .footer-container .header .right .short-description {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@keyframes smile {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 1;
+
+    }
+
+    50% {
+        transform: rotate(-185deg);
+
+    }
+
+    75% {
+        transform: rotate(-190deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-190deg);
+        opacity: 1;
+    }
+}
+
+
+
+.short-description {
+    color: #a0a0a0;
+    margin-right: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+}
+
+.email-input {
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.subscribe-button {
+    background-color: #2E3D48;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1060px) {
+    #logo {
+        margin-inline: 0px auto;
+        transform: scale(0.8);
+    }
+
+    #logo span {
+        max-width: 70px;
+    }
+
+    #logo:hover {
+        transform: scale(1);
+
+    }
+
+    .navbar {
+        font-size: 14px;
+    }
+
+    .navbar .navlist li a:hover {
+        font-weight: bolder;
+    }
+
+    #login {
+        font-size: 16px;
+    }
+
+    #Signup {
+        font-size: 16px;
+    }
+
+    .programs-card {
+        flex: 1 1 16rem;
+
+    }
+
+    .section .container .outerDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .section .container .outerDiv .description {
+        width: 100%;
+        text-align: left;
+        padding: 20px 40px 10px 40px !important;
+    }
+
+    .section .container .outerDiv .heroImage {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        padding: 0px !important;
+
+    }
+
+
+    .section .container .outerDiv .heroImage .gear {
+        background-image: url('assests/svg/gear1.svg');
+        width: 55px;
+        height: 55px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 10px;
+        bottom: 20px;
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+
+    .section .container .outerDiv .heroImage .gear2 {
+        background-image: url('assests/svg/gear2.svg');
+        width: 55px;
+        height: 55px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 10px;
+        bottom: 20px;
+        position: absolute;
+        bottom: 14%;
+        right: 1%;
+    }
+
+    .section .container .outerDiv .heroImage .gear3 {
+        background-image: url('assests/svg/gear3.svg');
+        width: 55px;
+        height: 55px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 10px;
+        bottom: 20px;
+        position: absolute;
+        bottom: 4%;
+        right: 3%;
+    }
+
+    .highlight-header .container .outerDiv .box-title {
+        width: 100%;
+        padding: 40px 40px 0px 40px !important;
+
+    }
+
+    .highlight-header .container .outerDiv .box-title h1 {
+        font-size: 58px;
+    }
+
+    .highlight-header .container .outerDiv .desc {
+        width: 100%;
+        padding: 10px 20px 20px 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+
+    .highlight-header .container .outerDiv .desc p {
+        color: whitesmoke;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 24px;
+    }
+
+    .highlight .container .outerDiv .box-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+        margin-top: 80px;
+        padding-top: 80px;
+        position: relative;
+
+    }
+
+    .highlight .container .outerDiv .box-title h1 {
+        font-size: 2.8rem;
+        padding: 0px 20px 0px 20px;
+    }
+
+
+    .highlight .container .outerDiv .box-title .Achieve {
+        display: none;
+    }
+
+    .review-section .container {
+        justify-content: center;
+        align-items: center !important;
+        flex-direction: column;
+        padding: 40px 10px !important;
+    }
+
+
+    .review-section .container .outerDiv .box-title {
+        width: 100%;
+        height: 100%;
+        margin: 40px 10px !important;
+    }
+
+    .review-section .container .outerDiv .box-title div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .review-section .container .outerDiv .box-title div h1 {
+        font-size: 1.6rem !important;
+    }
+
+
+
+    .review-card {
+        padding: 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .review-card .header .left {
+        padding: 10px;
+    }
+
+    .review-card .header .right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+    .review-card .header .right .rating {
+        font-size: 20px;
+    }
+
+
+    .review-craousel .mySlides .review-card p {
+        font-size: 18px;
+        text-align: center !important;
+        padding: 10px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+
+}
+
+
+@media Screen and (max-width:1000px) {
+    #logo {
+        margin-inline: 0px auto;
+        transform: scale(1);
+    }
+
+    #logo:hover {
+        transform: scale(1);
+
+    }
+
+    #login {
+        display: none;
+    }
+
+    #Signup {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: var(--primary-color);
+        top: 80px;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        padding-top: 40px;
+    }
+
+    .navbar .navlist {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        overflow-y: auto;
+    }
+
+    .navbar .navlist li {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .navbar .navlist li a:hover {
+        font-weight: bolder;
+    }
+
+    .footer-container {
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header .left {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+
+}
+
+
+@media Screen and (max-width:767px) {
+
+    #logo {
+        margin-inline: 0px auto;
+        transform: scale(0.8);
+    }
+
+    #logo span {
+        max-width: 70px;
+    }
+
+    .section .container {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .section .container .outerDiv {
+        flex-direction: column;
+    }
+
+    .section .container .outerDiv .description {
+        width: 100%;
+        text-align: left;
+        padding: 20px 20px 10px 20px !important;
+    }
+
+    .section .container .outerDiv .description h1 {
+        font-size: 32px !important;
+        font-weight: 400;
+    }
+
+    .section .container .outerDiv .description .para_1 {
+        font-size: 15px !important;
+    }
+
+    .section .container .outerDiv .description .para_2 {
+        font-size: 18px !important;
+        display: none;
+
+    }
+
+    .section .container .outerDiv .heroImage {
+        max-width: 100%;
+        width: 400px;
+        height: 300px;
+    }
+
+    .section .container .outerDiv .heroImage .gear {
+        background-image: url('assests/svg/gear1.svg');
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 20px;
+        right: 76px !important;
+    }
+
+    .section .container .outerDiv .heroImage .gear2 {
+        background-image: url('assests/svg/gear2.svg');
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 31px;
+        right: 46px !important;
+    }
+
+    .section .container .outerDiv .heroImage .gear3 {
+        background-image: url('assests/svg/gear3.svg');
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 2px;
+        right: 14%;
+    }
+
+
+    .highlight-header .container {
+        padding: 20px 0px !important;
+    }
+
+
+    .highlight-header .container .outerDiv .box-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .highlight-header .container .outerDiv .box-title h1 {
+        font-size: 45px;
+    }
+
+    .highlight-header .container .outerDiv .box-title h1 span {
+        color: rgb(190, 190, 235);
+    }
+
+    .highlight-header .container .outerDiv .desc {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .highlight-header .container .outerDiv .desc p {
+        color: whitesmoke;
+        font-size: 14px !important;
+        line-height: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .highlight .container .outerDiv .box-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+        margin-top: 80px;
+        padding-top: 80px;
+        position: relative;
+
+    }
+
+
+    .highlight .container .outerDiv .box-title h1 {
+        font-size: 3rem;
+        box-shadow: none;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .highlight .container .outerDiv .box-title h1 span {
+        color: rgb(190, 190, 235);
+    }
+
+
+    .highlight .container .outerDiv .box-title .Achieve {
+        display: none;
+    }
+
+
+
+    .card {
+        margin: 20px;
+        padding: 10px;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    .card:hover {
+        transform: scale(1.04);
+        border: solid rgb(99, 196, 130);
+    }
+
+
+    .our-programs .container .outerDiv .box-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+        margin-top: 80px;
+        padding-top: 80px;
+        position: relative;
+
+    }
+
+    .our-programs .container .outerDiv .box-title h1 {
+        font-size: 2.2em;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+        padding: 0 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .our-programs .container .outerDiv .box-title h1 span {
+        color: rgb(190, 190, 235);
+    }
+
+    .programs-container {
+        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0px 40px 0px;
+        padding: 20px 10px;
+    }
+
+    .programs-card {
+        transition: transform 0.2s;
+        box-shadow: none;
+
+    }
+
+    .programs-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .programs-card:hover img {
+        transform: scale(1.1);
+        transition: transform 0.8s ease-in-out;
+    }
+
+
+    .programs-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .programs-card .details {
+        padding: 15px;
+
+    }
+
+    .programs-card h2 {
+        font-size: 1.5em;
+        color: rgb(190, 190, 235);
+        margin-bottom: 10px;
+        font-weight: 700;
+        padding: 10px;
+
+    }
+
+    .programs-card .level,
+    .programs-card .instructor {
+        font-size: 14px;
+        color: rgb(123, 41, 143);
+        margin-bottom: 5px;
+    }
+
+    .programs-card .text {
+        font-size: 14px;
+        margin: 10px auto;
+        color: #777;
+        padding: 10px;
+        text-align: left;
+    }
+
+    #sub-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    #sub-header .level span {
+        font-weight: 500;
+        color: black;
+    }
+
+    #sub-header .instructor span {
+        font-weight: 500;
+        color: black;
+    }
+
+    #sub-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 10px auto;
+        padding: 0px 10px;
+    }
+
+    .programs-card .duration {
+        font-size: 1rem;
+        color: rgb(230, 91, 91);
+    }
+
+    .programs-card .price {
+        font-size: 1.1rem;
+        color: #F5A623;
+    }
+
+    .programs-card button {
+        background-color: rgb(99, 196, 130);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .programs-card button:hover {
+        background-color: #5246FF;
+    }
+
+    .programs-container .programs-card .img-outer-container {
+        overflow: hidden;
+    }
+
+
+    .review-section .container {
+        justify-content: center;
+        align-items: center !important;
+        flex-direction: column;
+        padding: 40px 10px !important;
+    }
+
+
+    .review-section .container .outerDiv .box-title {
+        width: 100%;
+        height: 100%;
+        margin: 40px 10px !important;
+    }
+
+    .review-section .container .outerDiv .box-title div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .review-section .container .outerDiv .box-title div h1 {
+        font-size: 1.6rem !important;
+    }
+
+
+
+    .review-card {
+        padding: 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .review-card .header .left {
+        padding: 10px;
+    }
+
+    .review-card .header .right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+    .review-card .header .right .rating {
+        font-size: 20px;
+    }
+
+
+    .review-craousel .mySlides .review-card p {
+        font-size: 18px;
+        text-align: center !important;
+        padding: 10px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+}
