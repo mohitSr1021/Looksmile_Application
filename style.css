@@ -1933,5 +1933,33 @@ h1 {
     }
 
 
+    .footer-container .header {
+        width: 100%;
+        padding: 0px !important;
+        border-bottom: none !important;
+    }
+
+    .footer-container .header > * {
+        font-size: 12px !important;
+    }
+    .footer-container .header .left{
+        margin-top: 0px !important;
+        align-items: flex-start !important;
+    }
+    .footer-container .header .right {
+        width: fit-content;
+    }
+    .footer-container .header .short-description {
+        display: none !important;
+
+    }
+
+    #bottom-logo {
+        display: none;
+    }
+    
+    #footer-info {
+        margin-bottom: 28vh !important;
+    }
 
 }
