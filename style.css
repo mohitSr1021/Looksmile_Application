@@ -23,6 +23,46 @@ a {
     color: aliceblue;
 }
 
+/* login validation form  */
+
+.mainLogin {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 header {
     width: 100%;
     height: 80px;
@@ -119,8 +159,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
     gap: 40px;
+    list-style: none;
 }
 
 .navbar .navlist li {
@@ -215,6 +255,99 @@ header {
     height: 100%;
     width: fit-content;
 }
+
+.mobAuth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    height: fit-content;
+}
+
+.mobAuth a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mobAuth>div {
+
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobAuth .mobLogin {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in;
+    background-color: rgb(99, 196, 130);
+    text-decoration: none;
+}
+
+.mobAuth .mobLogin i {
+    font-size: 20px;
+    color: #36454F;
+    margin-right: 4px;
+}
+
+.mobAuth .mobSignUp {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in;
+    background-color: blue;
+    text-decoration: none;
+}
+
+.mobAuth .mobSignUp i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.auth .myLearning {
+    font-size: 14px;
+    margin-right: 20px;
+    padding: 2px;
+    display: none;
+}
+
+.auth .myLearning:hover {
+    transform: scale(0.96);
+}
+
+.auth .myLearning:hover::after {
+    content: " ";
+    width: 70px;
+    height: 1px;
+    background-color: white;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: block;
+}
+
 
 #login {
     width: 100px;
@@ -393,7 +526,7 @@ h1 {
     width: 500px;
     max-width: 600px;
     height: 500px;
-    background-image: url('assests/img/hearo.webp');
+    background-image: url('/Looksmile_Application/assests/img/hearo.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -419,7 +552,7 @@ h1 {
 }
 
 .section .container .outerDiv .heroImage .gear {
-    background-image: url('assests/svg/gear1.svg');
+    background-image: url('/Looksmile_Application/assests/svg/gear1.svg');
     width: 55px;
     height: 55px;
     background-position: center;
@@ -434,7 +567,7 @@ h1 {
 
 
 .section .container .outerDiv .heroImage .gear2 {
-    background-image: url('assests/svg/gear2.svg');
+    background-image: url('/Looksmile_Application/assests/svg/gear1.svg');
     width: 55px;
     height: 55px;
     background-position: center;
@@ -448,7 +581,7 @@ h1 {
 }
 
 .section .container .outerDiv .heroImage .gear3 {
-    background-image: url('assests/svg/gear3.svg');
+    background-image: url('/Looksmile_Application/assests/svg/gear3.svg');
     width: 55px;
     height: 55px;
     background-position: center;
@@ -1029,7 +1162,6 @@ h1 {
 .prev {
     cursor: pointer;
     position: absolute;
-    width: auto;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -1255,6 +1387,8 @@ h1 {
 .subscribe-form {
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding: 10px;
 }
 
 .email-input {
@@ -1263,6 +1397,7 @@ h1 {
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    margin: auto;
 }
 
 .subscribe-button {
@@ -1277,6 +1412,7 @@ h1 {
 
 
 @media screen and (max-width: 1060px) {
+
     #logo {
         margin-inline: 0px auto;
         transform: scale(0.8);
@@ -1491,6 +1627,7 @@ h1 {
 
 
 @media Screen and (max-width:1000px) {
+
     #logo {
         margin-inline: 0px auto;
         transform: scale(1);
@@ -1521,9 +1658,9 @@ h1 {
         background-color: var(--primary-color);
         top: 80px;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         overflow-y: auto;
-        padding-top: 40px;
+        padding-bottom: 50px;
     }
 
     .navbar .navlist {
@@ -1533,7 +1670,7 @@ h1 {
         flex-direction: column;
         padding: 20px;
         width: 100%;
-        height: 100%;
+        height: fit-content;
         font-size: 18px;
         overflow-y: auto;
     }
@@ -1565,7 +1702,6 @@ h1 {
 
 
 @media Screen and (max-width:767px) {
-
     #logo {
         margin-inline: 0px auto;
         transform: scale(0.8);
@@ -1939,16 +2075,19 @@ h1 {
         border-bottom: none !important;
     }
 
-    .footer-container .header > * {
+    .footer-container .header>* {
         font-size: 12px !important;
     }
-    .footer-container .header .left{
+
+    .footer-container .header .left {
         margin-top: 0px !important;
         align-items: flex-start !important;
     }
+
     .footer-container .header .right {
         width: fit-content;
     }
+
     .footer-container .header .short-description {
         display: none !important;
 
@@ -1957,9 +2096,6 @@ h1 {
     #bottom-logo {
         display: none;
     }
-    
-    #footer-info {
-        margin-bottom: 28vh !important;
-    }
+
 
 }

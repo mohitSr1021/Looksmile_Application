@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+    <div class="main-container">
+        <form id="loginForm">
+            <div class="topBoaderBox">
+                <div class="logo" id="logo">
+                    <span class="curve"></span>
+                </div>
+                <p>Login and continue learning !!</p>
+            </div>
+            <label class="usernamel" for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required >
+
+            <label class="passwordl" for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <div class="fdiv">
+            <span>or</span><a href="#">Forgot Password</a>
+        </div>
+        <div class="BottomBoaderBox"></div>
+        <div class="bottom">
+            <span>Don't have an account?</span>
+            <a href="signup.html">Sign up</a>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

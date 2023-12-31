@@ -3,12 +3,33 @@ const navMenu = document.querySelector(".nav-menu");
 const menuIconOpen = document.querySelector(".menu-icon[name='mob-menu']");
 const menuIconClose = document.querySelector(".menu-icon[name='mob-close']");
 const nav = document.querySelector("nav");
+// add auth div into navllist
+const mobAuth = document.createElement("div");
 
 function openMenu() {
   nav.style.display = "flex";
+  nav.style.flexDirection = "column";
+  nav.style.alignItems = "center";
   menuIconOpen.style.display = "none";
   menuIconClose.style.display = "flex";
   document.body.style.overflowY = "hidden";
+  nav.appendChild(mobAuth);
+  mobAuth.setAttribute("class","mobAuth");
+  mobAuth.innerHTML = `
+  <a href="#" class="myLearning" onclick="toggleLearning()">My Learning</a>
+  <div>
+      <a class="mobLogin" href="./login.html">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span>Login</span>
+      </a>
+  </div>
+  <div>
+      <a class="mobSignUp" href="./signup.html">
+          <i class="fa-regular fa-user"></i>
+          <span>Signup</span>
+      </a>
+  </div>
+`;
 }
 
 function closeMenu() {
@@ -16,6 +37,8 @@ function closeMenu() {
   menuIconOpen.style.display = "flex";
   menuIconClose.style.display = "none";
   document.body.style.overflowY = "auto";
+  nav.removeChild(mobAuth);
+
 }
 
 menuIconOpen.addEventListener("click", openMenu);
@@ -82,3 +105,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
