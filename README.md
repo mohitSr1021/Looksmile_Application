@@ -23,10 +23,4 @@
 
 ---
 
-🚧 **Work in Progress**
-
-Looksmile is an ongoing project, and we're actively working to bring you even more features and improvements. Feel free to explore the current state of our UI, and we invite you to follow along as we continue to develop and enhance the Looksmile experience. Your feedback and contributions are greatly appreciated!
-
----
-
 # Thank you for visiting Looksmile! 🌟
