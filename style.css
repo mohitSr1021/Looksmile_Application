@@ -526,7 +526,7 @@ h1 {
     width: 500px;
     max-width: 600px;
     height: 500px;
-    background-image: url('/Looksmile_Application/assests/img/hearo.webp');
+    background-image: url('./assests/img/hearo.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -552,7 +552,7 @@ h1 {
 }
 
 .section .container .outerDiv .heroImage .gear {
-    background-image: url('/Looksmile_Application/assests/svg/gear1.svg');
+    background-image: url('/assests/svg/gear1.svg');
     width: 55px;
     height: 55px;
     background-position: center;
@@ -567,7 +567,7 @@ h1 {
 
 
 .section .container .outerDiv .heroImage .gear2 {
-    background-image: url('/Looksmile_Application/assests/svg/gear1.svg');
+    background-image: url('/assests/svg/gear1.svg');
     width: 55px;
     height: 55px;
     background-position: center;
@@ -581,7 +581,7 @@ h1 {
 }
 
 .section .container .outerDiv .heroImage .gear3 {
-    background-image: url('/Looksmile_Application/assests/svg/gear3.svg');
+    background-image: url('/assests/svg/gear3.svg');
     width: 55px;
     height: 55px;
     background-position: center;
